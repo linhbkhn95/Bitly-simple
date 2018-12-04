@@ -1,6 +1,7 @@
 import React from "react";
 import FormInput from "./components/FormInput";
 import ListResult from "./components/ListResult";
+import {connect} from 'react-redux'
 class Homepage extends React.Component {
   render() {
     return (
@@ -23,4 +24,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default Homepage;
+export default connect(function(state){return{link:state.link}})(Homepage);

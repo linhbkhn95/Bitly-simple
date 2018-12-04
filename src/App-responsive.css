@@ -29,6 +29,7 @@
     font-size: 21px;
     color: #fff;
     margin: 15px 0 45px;
+    line-height: 24px;
   }
 
   .mid-container {
@@ -72,22 +73,27 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
+
   .link-generate {
     margin-top: 20px;
     padding-bottom: 29px;
   }
+
   .button {
     padding: 9.6px 19.2px;
     font-size: 13.2px;
     line-height: 24px;
   }
+
   .link-generate {
     margin-top: 20px;
     padding-bottom: 29px;
   }
+
   .shortened_link {
     height: 140px !important;
   }
+
   #header .container {
     /* padding-top: 5px !important;
     padding-bottom: 5px !important; */
@@ -118,6 +124,7 @@
     margin: 0 32px 0 0;
     line-height: 43.2px;
   }
+
   .navbar-collapse ul li {
     margin: 0 32px 0 0;
     line-height: 43.2px;
@@ -129,10 +136,12 @@
     padding-bottom: 457px !important;
     margin-bottom: -457px !important;
   }
-  .btn-link{
+
+  .btn-link {
     color: #ee6123 !important;
     font-weight: 300 !important;
   }
+
   .shorten-input,
   .input-tall {
     height: 60px;
@@ -144,19 +153,23 @@
     padding: 24px 26px;
     height: 114px;
   }
+
   a.short-url {
     display: inline-block;
     font-size: 13px;
   }
+
   .sign-link {
     height: 110px;
     padding-top: 0;
   }
+
   .text-suggest {
     line-height: 110px;
     color: #003042;
     font-size: 16px;
   }
+
   .sign-link a.btn-link {
     display: block;
     width: 240px;

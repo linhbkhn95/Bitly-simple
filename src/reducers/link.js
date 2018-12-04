@@ -11,7 +11,7 @@ import {ADD_LINK_SUCCESS,ADD_LINK_REQUEST,ADD_LINK_FAILURE} from '../constants/t
      case ADD_LINK_REQUEST:
        return { ...state, loading: true, error: null };
      case ADD_LINK_SUCCESS:
-       return { ...state, loading: false, dog: action.dog };
+       return { ...state, loading: false, link: state.links.concat(action.data) };
      case ADD_LINK_FAILURE:
        return { ...state, loading: false, dog: null, error: action.error };
      default:

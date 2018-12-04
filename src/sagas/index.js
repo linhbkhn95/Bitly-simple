@@ -1,4 +1,5 @@
 // import 'regenerator-runtime/runtime';
+import { put, takeLatest, all } from 'redux-saga/effects';
 
 import {
     addLinkSaga
@@ -7,7 +8,7 @@ import {
 // Root sagas
 // Single entry point to start all sagas at once
 export default function* rootSaga() {
-  yield [
-    addLinkSaga
+   yield* [
+    addLinkSaga()
   ];
 }

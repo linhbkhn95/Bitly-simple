@@ -4,7 +4,7 @@ import "./App.css";
 import "./App-responsive.css"
 import Home from './components/homepage/index'
 import Layout from "./components/layout";
-import store from './store'
+import getStore from './store'
 import {
   BrowserRouter as Router,
   Route,
@@ -17,7 +17,20 @@ import {
 } from "react-router-dom";
 import { Provider } from "react-redux";
 import Notfound from './components/Notfound'
-console.log('stảte',store)
+import reducer from './reducers';
+import rootSaga from './sagas';
+import createSagaMiddleware from 'redux-saga';
+import { createStore, applyMiddleware } from 'redux';
+
+var store = getStore();
+const sagaMiddleware = createSagaMiddleware();
+
+// const store = createStore(
+//   reducer,
+//   applyMiddleware(sagaMiddleware),
+// );
+
+// sagaMiddleware.run(rootSaga);
 class App extends Component {
   render() {
     return (

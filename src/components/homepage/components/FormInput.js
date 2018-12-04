@@ -1,11 +1,11 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import { addLink } from "../../../actions/linkAction";
+import { addLink } from "../../../store/actions/linkAction";
 import { connect } from "react-redux";
 class FormInput extends React.Component {
   onSubmit(values) {
     console.log("valuedasda", values);
-    this.props.addLink(values.full_link, () => {
+    this.props.addLink(values, () => {
       this.props.history.push("/");
     });
   }

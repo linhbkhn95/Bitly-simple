@@ -17,20 +17,10 @@ import {
 } from "react-router-dom";
 import { Provider } from "react-redux";
 import Notfound from './components/Notfound'
-import reducer from './reducers';
-import rootSaga from './sagas';
-import createSagaMiddleware from 'redux-saga';
-import { createStore, applyMiddleware } from 'redux';
+
 
 var store = getStore();
-const sagaMiddleware = createSagaMiddleware();
 
-// const store = createStore(
-//   reducer,
-//   applyMiddleware(sagaMiddleware),
-// );
-
-// sagaMiddleware.run(rootSaga);
 class App extends Component {
   render() {
     return (

@@ -1,0 +1,4 @@
+export const ADD_LINK = "ADD_LINK";
+export const ADD_LINK_REQUEST = "ADD_LINK_REQUEST";
+export const ADD_LINK_SUCCESS = "ADD_LINK_SUCCESS";
+export const ADD_LINK_FAILURE = "ADD_LINK_FAILURE";

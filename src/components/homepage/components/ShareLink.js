@@ -5,6 +5,7 @@ class ShareLink extends React.Component {
     return (
       <li style={{display:"flex",justifyContent:"space-between",alignItems:"center"}} className="sign-link ">
          <div className="text-suggest">Want to customize, share, and track your links? </div>
+         
          <a className="btn-link ">Sign Up For Free</a>
       </li>
     );

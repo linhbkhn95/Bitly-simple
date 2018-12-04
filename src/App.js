@@ -4,6 +4,7 @@ import "./App.css";
 import "./App-responsive.css"
 import Home from './components/homepage/index'
 import Layout from "./components/layout";
+import store from './store'
 import {
   BrowserRouter as Router,
   Route,
@@ -14,11 +15,13 @@ import {
   NavLink,
   Link
 } from "react-router-dom";
+import { Provider } from "react-redux";
 import Notfound from './components/Notfound'
+console.log('stảte',store)
 class App extends Component {
   render() {
     return (
-      // <Provider store={store}>
+      <Provider store={store}>
         <Router>
           <React.Fragment>
             {/* <Link to="/user/login">Đăng nhập</Link>  */}
@@ -45,7 +48,7 @@ class App extends Component {
             </Switch>
           </React.Fragment>
         </Router>
-      // </Provider>
+       </Provider>
     );
   }
 }

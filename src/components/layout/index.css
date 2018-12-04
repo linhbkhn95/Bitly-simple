@@ -1,103 +1,115 @@
 #header {
-    /* *zoom: 1;
+  /* *zoom: 1;
     -webkit-box-shadow: none; */
-    box-shadow: none;
-    width: 100%;
-    z-index: 1000;
-    position: relative;
-    font-family: brandon-grotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding-bottom: 270px;
-    margin-bottom: -270px;
-    background: url(https://d1ayxb9ooonjts.cloudfront.net/7607bc8563ac28b8631dbc5867d672ee.jpg) top center no-repeat;
-    background-size: cover;
+  box-shadow: none;
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+  font-family: brandon-grotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 270px;
+  margin-bottom: -270px;
+  background: url(https://d1ayxb9ooonjts.cloudfront.net/7607bc8563ac28b8631dbc5867d672ee.jpg)
+    top center no-repeat;
+  background-size: cover;
 }
 
 .navbar-default {
-    background: none !important;
-    border: none;
-    box-shadow: none;
+  background: none !important;
+  border: none;
+  box-shadow: none;
 }
 
 #header li a {
-    color: white;
-    line-height: 43.2px;
-    display: block;
-    line-height: 43px;
-    text-decoration: none;
-    padding: 0px;
+  color: white;
+  line-height: 43.2px;
+  display: block;
+  line-height: 43px;
+  text-decoration: none;
+  padding: 0px;
 }
-#header li a:hover{
-    background: none !important;
+#header li a:hover {
+  background: none !important;
+}
+.navbar-header button {
+  border: 1px solid #fff;
+  padding: 8px 9px 9px;
+  right: 0;
+  /* top: 13px; */
+  border-radius: 3px;
+}
+#header .in .navbar-nav{
+    padding-left: 15px !important;
+}
+#header .in ul li{
+    float: none !important;
 }
 /* #header li a:hover{
     border-top: 3px solid white;
 } */
 #header li:hover::before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    top: -32px;
-    left: 0;
-    background: #fff;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: -32px;
+  left: 0;
+  background: #fff;
 }
 
 #header .container {
-    padding-top: 32px;
-    padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-logo {
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiI…AgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=) no-repeat;
-    background-size: contain;
-    width: 79px;
-    height: 36px;
-    margin: 0;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiI…AgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=)
+    no-repeat;
+  background-size: contain;
+  width: 79px;
+  height: 36px;
+  margin: 0;
 }
-
-
 
 .enterprise {
-    background-color: #fff;
-    color: #0e3042;
-    text-decoration: none !important;
-    border: 1px solid #fff;
-    padding: 0 36px;
-    color: #0e3042;
-    position: relative;
-    top: -2px;
+  background-color: #fff;
+  color: #0e3042;
+  text-decoration: none !important;
+  border: 1px solid #fff;
+  padding: 0 36px;
+  color: #0e3042;
+  position: relative;
+  top: -2px;
 }
 a.enterprise:hover {
-    background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255, 255, 255, 0.9);
 }
 #header a.enterprise {
-    display: inline-block;
-    height: 46px;
-    border-radius: 3px;
-    text-align: center;
-    line-height: 46px;
-    font-weight: 600;
-    font-size: 13px;
-    font-family: brandon-grotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-transform: uppercase;
-    padding: 0 19px;
-    cursor: pointer;
+  display: inline-block;
+  height: 46px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 46px;
+  font-weight: 600;
+  font-size: 13px;
+  font-family: brandon-grotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  padding: 0 19px;
+  cursor: pointer;
 }
 
 #header li {
-    background: none !important;
-    margin: 0 32px 0 0;
-    line-height: 43.2px;
-    font-size: 13px;
-    float: left;
-    margin: 0 16px 0 0;
-    text-rendering: optimizelegibility;
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 36px;
-    text-transform: uppercase;
-    color: #a3aaae;
-    padding-left: 0;
+  background: none !important;
+  margin: 0 32px 0 0;
+  line-height: 43.2px;
+  font-size: 13px;
+  float: left;
+  margin: 0 16px 0 0;
+  text-rendering: optimizelegibility;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #a3aaae;
+  padding-left: 0;
 }
-

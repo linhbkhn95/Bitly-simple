@@ -156,7 +156,9 @@ body {
   color: #fff;
   background-color: #ee6123;
 }
-
+.navbar .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
 button,
 input[type="button"],
 input[type="reset"],

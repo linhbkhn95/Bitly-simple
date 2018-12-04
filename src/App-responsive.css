@@ -114,6 +114,10 @@
         margin: 0 32px 0 0;
         line-height: 43.2px;
     }
+    .navbar-collapse ul li {
+        margin: 0 32px 0 0;
+        line-height: 43.2px;
+    }
 }
 
 @media (min-width: 768px) {

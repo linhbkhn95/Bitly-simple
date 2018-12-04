@@ -22,11 +22,13 @@
     color: white;
     line-height: 43.2px;
     display: block;
-    line-height: 36px;
+    line-height: 43px;
     text-decoration: none;
     padding: 0px;
 }
-
+#header li a:hover{
+    background: none !important;
+}
 /* #header li a:hover{
     border-top: 3px solid white;
 } */

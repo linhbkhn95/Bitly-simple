@@ -18,6 +18,27 @@ body {
   height: 40vmin;
 }
 
+.header-fixed {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  /* -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999; */
+
+}
+
+.animation {
+
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -66,6 +87,7 @@ body {
 .link-more:hover {
   line-height: 16px;
   cursor: pointer;
+  color: #61b3de;
   border-bottom: 1px solid #61b3de;
   text-decoration: none;
 }
@@ -92,7 +114,18 @@ body {
   position: relative;
   z-index: 1001;
 }
-
+#header .header-fixed li  a {
+  color: #ee6123;
+  
+}
+#header .header-fixed li  a:hover{
+  background: none !important;
+  
+}
+#header .header-fixed .enterprise{
+  background-color: #ee6123;
+  color: #fff;
+}
 .shorten-input,
 .input-tall {
   width: 100%;
@@ -116,6 +149,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
+  height: 100%;
 }
 
 .button.button-primary {
@@ -274,7 +308,7 @@ a.short-url {
   line-height: 46px;
   font-weight: 600;
   font-size: 13px;
-  font-family: brandon-grotesque,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: brandon-grotesque, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   padding: 0 19px;

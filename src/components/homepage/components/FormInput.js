@@ -13,10 +13,10 @@ class FormInput extends React.Component {
               type="text"
               className="shorten-input"
               placeholder="Paste a link to shorten it"
-              value=""
-              autocomplete="off"
-              autocorrect="off"
-              autocapitalize="off"
+              // value=""
+              // autocomplete="off"
+              // autocorrect="off"
+              // autocapitalize="off"
             />
             <input
               id="shorten_btn"

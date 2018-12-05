@@ -12,7 +12,7 @@ class ResultItem extends React.Component {
     return (
       <li className="shortened_link ">
         <div className="title-link">
-          <a className="article-title">Budweiser lon 330ml - Thùng 24</a>
+          <a className="article-title">{dataItem.title_link}</a>
         </div>
         <div className="url-link">
           <a className="article-title smaller">
@@ -40,8 +40,13 @@ class ResultItem extends React.Component {
           </div>
           <div className="info-page">
             <div className="number">{dataItem.count}</div>
-            <i style={{marginLeft:"5px"}} className="far fa-bar-chart" aria-hidden="true">gf</i>
-
+            <i
+              style={{ marginLeft: "5px" }}
+              className="far fa-bar-chart"
+              aria-hidden="true"
+            >
+              gf
+            </i>
           </div>
         </div>
       </li>

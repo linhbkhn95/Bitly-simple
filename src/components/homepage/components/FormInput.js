@@ -33,7 +33,7 @@ class FormInput extends React.Component {
     </React.Fragment>
   );
   render() {
-    const { handleSubmit, anyTouched, submitting,invalid,valid } = this.props;
+    const { handleSubmit, anyTouched, submitting, invalid, valid } = this.props;
 
     return (
       <div id="form-input" className="text-center mid-container">
@@ -43,7 +43,7 @@ class FormInput extends React.Component {
             <input
               id="shorten_btn shorten-input"
               type="submit"
-              disabled={invalid||!valid}
+              disabled={invalid || !valid}
               className="button button-primary button-large shorten-button"
               value="Shorten"
             />
@@ -57,7 +57,7 @@ const validate = values => {
   const errors = {};
   console.log("validatesss==>", values);
   if (!values.full_link || !values.full_link.trim()) {
-    errors.full_link = "Link is not require ";
+    errors.full_link = "Link is require ";
   }
   // Check for required fields
   // _each(FIELDS, (fieldObject, fieldName) => {

@@ -25,6 +25,7 @@ export default function reducer(state = initialState, action) {
         stateCopy.data.unshift(action.data);
       } else {
         stateCopy.data[index] = action.data;
+        stateCopy.data = swap(stateCopy.data, 0, index);
       }
       return {
         ...stateCopy,
@@ -53,8 +54,13 @@ export default function reducer(state = initialState, action) {
 function initData(data) {
   let list_shortLink = {};
   for (var i = 0; i < data.length; i++) {
-    
     list_shortLink[data[i].short_link] = i;
   }
   return list_shortLink;
+}
+function swap(arr, i, j) {
+  var temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+  return arr;
 }

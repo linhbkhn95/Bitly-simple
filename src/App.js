@@ -17,7 +17,7 @@ import {
 } from "react-router-dom";
 import { Provider } from "react-redux";
 import Notfound from './components/Notfound'
-
+import RedirectWebsite from './components/redirect'
 
 var store = getStore();
 
@@ -37,8 +37,7 @@ class App extends Component {
                     {/* <Route path="/wall" component={Home} /> */}
                     {/* <Route path="/post.notifi.:postId" component={PostNotifi} /> */}
                     {/* <Route path="/groups/:groupname" component={GroupPage} /> */}
-
-                  
+                    <Route exact path="/:short_link" component={RedirectWebsite} />
                     <Route
                       render={function() {
                         return <Notfound />;

@@ -1,5 +1,4 @@
 import React from "react";
-
 class ResultItem extends React.Component {
   constructor(props) {
     super(props);
@@ -12,17 +11,22 @@ class ResultItem extends React.Component {
     return (
       <li className="shortened_link ">
         <div className="title-link">
-          <a className="article-title">{dataItem.title_link}</a>
+          <a href={dataItem.full_link} className="article-title">
+            {dataItem.title_link}
+          </a>
         </div>
         <div className="url-link">
-          <a className="article-title smaller">
+          <a href={dataItem.full_link} className="article-title smaller">
             {/* vuabia.com/budweiser-330ml-1x24box-can.html */}
             {dataItem.full_link}
           </a>
         </div>
         <div className="link-generate">
           <div className="short-link">
-            <a> {dataItem.short_link}</a>
+            <a href={`/${dataItem.short_link}`}>
+              {" "}
+              {`${window.location.host}/${dataItem.short_link}`}
+            </a>
 
             <a
               style={{
@@ -40,13 +44,13 @@ class ResultItem extends React.Component {
           </div>
           <div className="info-page">
             <div className="number">{dataItem.count}</div>
-            <i
+            <span
               style={{ marginLeft: "5px" }}
-              className="far fa-bar-chart"
+              className="glyphicon glyphicon-signal"
               aria-hidden="true"
             >
-              gf
-            </i>
+              
+            </span>
           </div>
         </div>
       </li>

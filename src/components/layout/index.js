@@ -8,6 +8,9 @@ class Layout extends React.Component {
       transform: null
     };
   }
+  componentWillMount(){
+
+  }
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll.bind(this));
   }

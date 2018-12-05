@@ -6,7 +6,7 @@ class FormInput extends React.Component {
   onSubmit(values) {
     console.log("valuedasda", values);
     this.props.addLink(values, () => {
-      this.props.history.push("/");
+      // this.props.history.push("/");
     });
   }
 
@@ -28,12 +28,12 @@ class FormInput extends React.Component {
         // autocapitalize="off"
       />
       {touched &&
-        ((error && <span>{error}</span>) ||
+        ((error && <span className="text-error">{error}</span>) ||
           (warning && <span>{warning}</span>))}
     </React.Fragment>
   );
   render() {
-    const { handleSubmit, anyTouched, submitting } = this.props;
+    const { handleSubmit, anyTouched, submitting,invalid,valid } = this.props;
 
     return (
       <div id="form-input" className="text-center mid-container">
@@ -41,8 +41,9 @@ class FormInput extends React.Component {
           <fieldset className="cf">
             <Field name="full_link" type="text" component={this.renderField} />
             <input
-              id="shorten_btn"
+              id="shorten_btn shorten-input"
               type="submit"
+              disabled={invalid||!valid}
               className="button button-primary button-large shorten-button"
               value="Shorten"
             />
@@ -52,19 +53,12 @@ class FormInput extends React.Component {
     );
   }
 }
-
-export default reduxForm({
-  validate,
-  form: "FormInput"
-})(
-  connect(
-    null,
-    { addLink }
-  )(FormInput)
-);
 const validate = values => {
   const errors = {};
-
+  console.log("validatesss==>", values);
+  if (!values.full_link || !values.full_link.trim()) {
+    errors.full_link = "Link is not require ";
+  }
   // Check for required fields
   // _each(FIELDS, (fieldObject, fieldName) => {
   //   // Check if the FIELDS config object has a custom validation function to run
@@ -82,3 +76,12 @@ const validate = values => {
   // If errors has any properties, redux form assumes form is invalid
   return errors;
 };
+export default reduxForm({
+  validate,
+  form: "FormInput"
+})(
+  connect(
+    null,
+    { addLink }
+  )(FormInput)
+);

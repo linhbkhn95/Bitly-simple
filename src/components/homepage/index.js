@@ -24,4 +24,4 @@ class Homepage extends React.Component {
   }
 }
 
-export default connect(function(state){return{link:state.link}})(Homepage);
+export default Homepage;

@@ -191,3 +191,8 @@
     width: 98%;
   }
 }
+@media only screen and (max-width: 992px) {
+  .button.button-large.shorten-button{
+    height: 100%;
+  }
+}

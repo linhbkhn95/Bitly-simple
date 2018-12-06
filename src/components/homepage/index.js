@@ -25,7 +25,7 @@ const publicVapidKey =
 // }
 
 async function run(registration) {
-  console.log("Registering service worker",registration);
+  console.log("Registering service worker", registration);
   // const registration = await navigator.serviceWorker.register("/worker.js", {
   //   scope: "/"
   // });
@@ -78,47 +78,48 @@ class Homepage extends React.Component {
     //   // Include below mentioned validations
     // });
     //  navigator.serviceWorker.ready.then(function(reg) {  })
-
-    navigator.serviceWorker.register("/worker.js", { scope: "/" }).then(
-      function(reg) {
-        var serviceWorker;
-        if (reg.installing) {
-          serviceWorker = reg.installing;
-          // console.log('Service worker installing');
-        } else if (reg.waiting) {
-          serviceWorker = reg.waiting;
-          // console.log('Service worker installed & waiting');
-        } else if (reg.active) {
-          serviceWorker = reg.active;
-          // console.log('Service worker active');
-        }
-
-        if (serviceWorker) {
-          console.log("sw current state", serviceWorker.state);
-          if (serviceWorker.state == "activated") {
-             run(reg).catch(error => console.error(error));
-
-            //If push subscription wasnt done yet have to do here
-            console.log("sw already activated - Do watever needed here");
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register("/worker.js", { scope: "/" }).then(
+        function(reg) {
+          var serviceWorker;
+          if (reg.installing) {
+            serviceWorker = reg.installing;
+            // console.log('Service worker installing');
+          } else if (reg.waiting) {
+            serviceWorker = reg.waiting;
+            // console.log('Service worker installed & waiting');
+          } else if (reg.active) {
+            serviceWorker = reg.active;
+            // console.log('Service worker active');
           }
-          serviceWorker.addEventListener("statechange", function(e) {
-         //   console.log("sw statechange : ", e.target.state);
-            if (e.target.state == "activated") {
-              // use pushManger for subscribing here.
+
+          if (serviceWorker) {
+            console.log("sw current state", serviceWorker.state);
+            if (serviceWorker.state == "activated") {
               run(reg).catch(error => console.error(error));
 
-              console.log(
-                "Just now activated. now we can subscribe for push notification"
-              );
-              // subscribeForPushNotification(reg);
+              //If push subscription wasnt done yet have to do here
+              console.log("sw already activated - Do watever needed here");
             }
-          });
+            serviceWorker.addEventListener("statechange", function(e) {
+              //   console.log("sw statechange : ", e.target.state);
+              if (e.target.state == "activated") {
+                // use pushManger for subscribing here.
+                run(reg).catch(error => console.error(error));
+
+                console.log(
+                  "Just now activated. now we can subscribe for push notification"
+                );
+                // subscribeForPushNotification(reg);
+              }
+            });
+          }
+        },
+        function(err) {
+          console.error("unsuccessful registration with ", "./worker.js", err);
         }
-      },
-      function(err) {
-        console.error("unsuccessful registration with ", "./worker.js", err);
-      }
-    );
+      );
+    }
     // if ("serviceWorker" in navigator) {
     //   console.log("Registering service worker");
 

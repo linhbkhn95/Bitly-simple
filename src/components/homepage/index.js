@@ -4,9 +4,8 @@ import ListResult from "./components/ListResult";
 import { connect } from "react-redux";
 import axios from "axios";
 import { apiBase } from "../../client/config";
+import publicVapidKey from "../../client/config";
 
-const publicVapidKey =
-  "BCd-NNalv04tT2HKYxWcv4nqEd2jUeW173il04IjQXRu_H6XTQ_7tz9ovPDfAandOeVHj6hyeZqqQBSooqtlJoo";
 // navigator.serviceWorker.register("sw.js").then(function(reg) {
 //   if (reg.installing) {
 //     console.log("Service worker installing");

@@ -3,8 +3,7 @@ import FormInput from "./components/FormInput";
 import ListResult from "./components/ListResult";
 import { connect } from "react-redux";
 import axios from "axios";
-import { apiBase } from "../../client/config";
-import publicVapidKey from "../../client/config";
+import { apiBase,publicVapidKey } from "../../client/config";
 
 // navigator.serviceWorker.register("sw.js").then(function(reg) {
 //   if (reg.installing) {
